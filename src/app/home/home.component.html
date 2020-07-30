@@ -1,0 +1,33 @@
+<h2>Home Component</h2>
+
+<h2>Access Child Property and Method</h2>
+<button (click)="increase()">Increase</button>
+<button (click)="decrease()">Decrease</button>
+<app-counter [name]="'one'"></app-counter><br>
+<app-counter name="two"></app-counter><br>
+<app-counter [name]="'three'"></app-counter><br>
+<app-counter [name]="'three'"></app-counter>
+<hr>
+
+<h2>Access Directive Property and Method</h2>
+<select #col (change)="onChange(col.value)">
+    <option>Select</option>
+    <option value="green">Green</option>
+    <option value="gold">Gold</option>
+    <option value="blue">Blue</option>
+</select>
+<p appColor name='one'>Style from Directive</p>
+<p appColor [name]="'two'">Style from Directive</p>
+<p appColor [name]="'two'">Style from Directive</p>
+<p appColor name='three'>Style from Directive</p>
+<hr>
+
+<h2>Self Element Access</h2>
+<input #input type="text" placeholder="Name">
+<button #btn >Click</button>
+<br><br>
+<input #input type="text" placeholder="Name">
+<button #btn>Click</button>
+<br><br>
+<input #input type="text" placeholder="Name">
+<button #btn>Click</button>
